@@ -24,36 +24,29 @@ const setActive = (el, active) => {
 
 
 function disable() {
-    let textFieldControl =  document.querySelectorAll(".mds-text-field__control");
-    for (const bgcolor of textFieldControl) {
-        bgcolor.style.background = "#d4d2d29e";    
-    };
-
+    let textFieldInputs = document.querySelectorAll(".mds-text-field__input");
+    for (let textInputs of textFieldInputs) {
+        textInputs.setAttribute("disabled", true);
+    }
+    let radioButtons = document.querySelectorAll(".mds-radio__input");
+    for (let buttons of radioButtons) {
+        buttons.setAttribute("disabled", true);
+    }
+    document.getElementById("id-name--1").disabled = true;
     document.getElementById("i1").disabled = true;
     document.getElementById("i2").disabled = true;
-
-    let radioButtons = document.querySelectorAll(".mds-radio__input");
-    for (let buttons of radioButtons){
-        buttons.setAttribute("disabled", true);
-    }   
-
-    
-    
-    document.getElementById("id-name--1").disabled = true;
 }
 function enable() {
-    
-    let textFieldControl =  document.querySelectorAll(".mds-text-field__control");
-    for (const bgcolor of textFieldControl) {
-        bgcolor.style.background = "#fff    ";    
-    };
+    let textFieldInputs = document.querySelectorAll(".mds-text-field__input");
+    for (let textInputs of textFieldInputs) {
+        textInputs.removeAttribute("disabled");
+    }
 
+    let radioButtons = document.querySelectorAll(".mds-radio__input");
+    for (let buttons of radioButtons) {
+        buttons.removeAttribute("disabled", false);
+    }
+    document.getElementById("id-name--1").disabled = false;
     document.getElementById("i1").disabled = false;
     document.getElementById("i2").disabled = false;
-    
-    let radioButtons = document.querySelectorAll(".mds-radio__input");
-    for (let buttons of radioButtons){
-        buttons.removeAttribute("disabled", false);
-    }   
-    document.getElementById("id-name--1").disabled = false;
 }
