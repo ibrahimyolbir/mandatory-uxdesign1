@@ -118,10 +118,8 @@ header{
     margin: 1em 0;
     text-align: left;
   }
-  .mds-checkbox.mds-checkbox-inline {
-    display: inline-block;
-  }
-  .mds-checkbox label {
+  
+  .mds-checkbox .mds-checkbox__label { 
     cursor: pointer;
     display: inline;
     line-height: 1.25em;
@@ -129,16 +127,16 @@ header{
     clear: both;
     padding-left: 1px;
   }
-  .mds-checkbox label:not(:empty) {
+  .mds-checkbox .mds-checkbox__label:not(:empty) {
     padding-left: 0.75em;
   }
-  .mds-checkbox label:before, .mds-checkbox label:after {
+  .mds-checkbox .mds-checkbox__label:before, .mds-checkbox .mds-checkbox__label:after {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
   }
-  .mds-checkbox label:before {
+  .mds-checkbox .mds-checkbox__label:before {
     width: 1.25em;
     height: 1.25em;
     background: #fff;
@@ -147,7 +145,7 @@ header{
     cursor: pointer;
     transition: background 0.3s;
   }
-  .mds-checkbox input[type=checkbox] {
+  .mds-checkbox .mds-checkbox__input[type=checkbox] {
     outline: 0;
     visibility: hidden;
     width: 1.25em;
@@ -156,11 +154,11 @@ header{
     float: left;
     font-size: inherit;
   }
-  .mds-checkbox input[type=checkbox]:checked + label:before {
+  .mds-checkbox .mds-checkbox__input[type=checkbox]:checked + .mds-checkbox__label:before {
     background: #00BCD4;
     border: none;
   }
-  .mds-checkbox input[type=checkbox]:checked + label:after {
+  .mds-checkbox .mds-checkbox__input[type=checkbox]:checked + .mds-checkbox__label:after {
     transform: translate(0.25em, 0.3365384615em) rotate(-45deg);
     width: 0.75em;
     height: 0.375em;
@@ -168,10 +166,10 @@ header{
     border-top-style: none;
     border-right-style: none;
   }
-  .mds-checkbox input[type=checkbox]:disabled + label:before {
+  .mds-checkbox .mds-checkbox__input[type=checkbox]:disabled + .mds-checkbox__label:before {
     border-color: rgba(0, 0, 0, 0.26);
   }
-  .mds-checkbox input[type=checkbox]:disabled:checked + label:before {
+  .mds-checkbox .mds-checkbox__input[type=checkbox]:disabled:checked + .mds-checkbox__label:before {
     background: rgba(0, 0, 0, 0.26);
   }
   
